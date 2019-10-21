@@ -9,6 +9,8 @@ beego学习demo
 3. docker化应用
 4. restful
 5. vsc调试
+6. ORM操作
+7. 文件下载操作
 
 
 
