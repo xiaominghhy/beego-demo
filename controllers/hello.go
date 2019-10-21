@@ -12,6 +12,7 @@ type ShortResult struct {
 	UrlShort string
 	UrlLong  string
 }
+
 func (this *HelloController) Get() {
 	var result ShortResult
 	shorturl := this.Input().Get("shorturl")
@@ -25,7 +26,7 @@ func (this *HelloController) Get() {
 
 	result.UrlShort = shorturl
 
-	result.UrlLong = "haode"
+	result.UrlLong = "json数据返回"
 
 	this.Data["json"] = result
 	this.ServeJSON()

@@ -10,15 +10,15 @@ beego学习demo
 
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  安装go
+2.  安装beego
+3.  安装bee
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  bee new ProjectName
+2.  bee run 
+3.  bee generate
 
 #### 参与贡献
 
