@@ -1,19 +1,22 @@
-FROM library/golang:1.6.4
+FROM golang:1.9.1
 
-# Godep for vendoring
-RUN go get github.com/tools/godep
+# Install beego and the bee dev tool*
+RUN go get github.com/astaxie/beego && go get github.com/beego/bee
 
-# Recompile the standard library without CGO
-RUN CGO_ENABLED=0 go install -a std
+#指定好工作目录，后面就会以这个作为相对路径
+WORKDIR /home/app/
+#add app
+ADD  beego-demo  beego-demo 
 
-ENV APP_DIR $GOPATH/src/beego-demo
-RUN mkdir -p $APP_DIR
-
-# Set the entrypoint
-ENTRYPOINT (cd $APP_DIR && ./beego-demo)
-ADD . $APP_DIR
-
-# Compile the binary and statically link
-RUN cd $APP_DIR && CGO_ENABLED=0 godep go build -ldflags '-d -w -s'
-
+# Expose the application on port 8080
 EXPOSE 8080
+
+# Set the entry point of the container to the bee command that runs the
+# application and watches for changes
+# CMD ["sh", "beego-demo "]
+ENTRYPOINT [ "sh", "-c", "/home/app/beego-demo "]
+
+# 作者：xhaoxiong
+# 链接：https://hacpai.com/article/1526210600840
+# 来源：黑客派
+# 协议：CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/

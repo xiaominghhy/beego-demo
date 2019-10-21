@@ -5,7 +5,11 @@ beego学习demo
 
 #### 学习内容
 1. logs
-2. router
+2. router，控制器的学习与使用
+3. docker化应用
+4. restful
+5. vsc调试
+
 
 
 #### 安装教程
@@ -20,19 +24,19 @@ beego学习demo
 2.  bee run 
 3.  bee generate
 
-#### 参与贡献
+运行bee run的时候程序就会自动构建打包成一个二进制文件。
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+#### docker化使用
 
+镜像构建
+```
+docker build -t beego .
+```
+容器运行
+```
+docker run -rm -p 8080:8080 beego
+```
+--rm 表示运行之后就直接删除该容器
 
-#### 码云特技
+目前发现一个问题就是界面渲染出现问题，那个返回json数据没有任何问题。
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
