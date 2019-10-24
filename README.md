@@ -11,6 +11,7 @@ beego学习demo
 5. vsc调试
 6. ORM操作
 7. 文件下载操作
+8. 文件夹与package name应该是一致的。也就是同一个文件夹中的package应该都是一样的。
 
 
 
@@ -42,3 +43,5 @@ docker run -rm -p 8080:8080 beego
 
 目前发现一个问题就是界面渲染出现问题，那个返回json数据没有任何问题。
 
+### log
+* 2019/10/24：解决app-dev.conf文件包含自己导致栈溢出。
