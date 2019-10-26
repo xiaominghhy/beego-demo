@@ -39,5 +39,6 @@ func (c *MysqlController) Post() {
 	// 包名加结构体,什么时候需要 & 什么时候不需要& 泛型？anyType怎么定义
 	data := &models.BaseResponseModel{"200", "查询数据库Post", models.User{Id: 6}}
 	c.Data["json"] = data
+	// models.addUser()
 	c.ServeJSON()
 }
