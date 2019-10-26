@@ -1,0 +1,4 @@
+static/upload
+.vscode/
+go.sum
+beego-demo

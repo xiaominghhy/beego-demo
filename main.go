@@ -1,6 +1,7 @@
 package main
 
 import (
+	// 前面有一个下划线表示初始化init方法
 	_ "beego-demo/routers"
 
 	"github.com/astaxie/beego"
@@ -13,9 +14,9 @@ func main() {
 	beego.AppConfig.String("mysqlurls")
 	beego.AppConfig.String("mysqldb")
 
-	// 下载文件
+	// 下载文件 上传文件参考 controller/file.go
 	// StaticDir["/static"] = "static"
-	beego.SetStaticPath("/down1", "download1")
+	beego.SetStaticPath("/down1", "static/upload")
 	beego.Run()
 }
 
