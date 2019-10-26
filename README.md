@@ -2,6 +2,9 @@
 
 #### 介绍
 beego学习demo
+1.  安装go
+2.  安装beego
+3.  安装bee
 
 #### 学习内容
 1. logs
@@ -14,13 +17,11 @@ beego学习demo
 8. 文件夹与package name应该是一致的。也就是同一个文件夹中的package应该都是一样的。
 9. anyType定义
 
-
-
-#### 安装教程
-
-1.  安装go
-2.  安装beego
-3.  安装bee
+url | 用途
+--|--
+/user| 用户的增删改查
+/file| 文件的上传
+/download|文件下载
 
 #### 使用说明
 

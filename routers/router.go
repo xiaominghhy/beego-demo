@@ -12,4 +12,6 @@ func init() {
 	beego.Router("/json", &controllers.DataController{})
 	beego.Router("/mysql/user", &controllers.MysqlController{})
 	beego.Router("/file", &controllers.FileController{})
+	beego.Router("/user", &controllers.UserController{})
+
 }
