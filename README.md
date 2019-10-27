@@ -6,6 +6,7 @@ beego学习demo
 2.  安装beego
 3.  安装bee
 
+参考：https://gitee.com/truthhun/DocHub
 #### 学习内容
 1. logs
 2. router，控制器的学习与使用
