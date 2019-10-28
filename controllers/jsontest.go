@@ -1,6 +1,8 @@
 package controllers
 
 import (
+	"beego-demo/models"
+
 	"github.com/astaxie/beego"
 )
 
@@ -25,6 +27,9 @@ type JSONS struct {
 func (c *DataController) Get() {
 	data := &JSONS{"100", "获取成功",
 		[]string{"maple", "18"}, LIKE{"蛋糕", "电影", "音乐"}}
-	c.Data["json"] = data
+	response := &models.BaseResponseModel{200, "查询数据库Post", data}
+	// response := models.SuccessBaseResponse(data)
+	c.Data["json"] = response
+
 	c.ServeJSON()
 }
