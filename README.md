@@ -10,7 +10,10 @@ beego学习demo
 4. restful
 5. vsc调试
 
-
+#### plan
+* ORM框架
+* JWT
+* schedule
 
 #### 安装教程
 
