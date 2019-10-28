@@ -18,7 +18,7 @@ func main() {
 	logs.EnableFuncCallDepth(true)
 	logs.Async()
 	logs.Informational("程序开始运行")
-	// 日志打印的另一种方式
+	// 日志打印的另一种方式，但是这种方式已经被官方放弃了，建议使用上面那种
 	beego.SetLogger("file", `{"filename":"logs/test.log"}`)
 	beego.Info("日志的另一种方式,相比较上面好像文件与行数更加准确")
 
