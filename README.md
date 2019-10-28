@@ -48,11 +48,12 @@ beego-demo
 2.  安装beego
 3.  安装bee
 
-url | 用途
---|--
-/Q      Q   | 用户的增删改查
-/file| 文件的上传
-/download|文件下载
+
+url|用途
+---|---
+user|用户的增删改查
+file|文件的上传
+download|文件下载
 
 #### docker化使用
 
