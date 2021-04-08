@@ -7,11 +7,8 @@ import (
 )
 
 func init() {
-	beego.Router("/", &controllers.MainController{})
-	beego.Router("/hello", &controllers.HelloController{})
-	beego.Router("/json", &controllers.DataController{})
-	beego.Router("/mysql/user", &controllers.MysqlController{})
-	beego.Router("/file", &controllers.FileController{})
+	// beego.Router("/", &controllers.MainController{})
 	beego.Router("/user", &controllers.UserController{})
+	beego.Router("/user/list", &controllers.UserController{},"get:ListUser")
 
 }

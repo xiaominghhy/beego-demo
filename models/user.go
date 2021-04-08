@@ -3,6 +3,7 @@ package models
 import (
 	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"
+	"fmt"
 )
 
 type User struct {
@@ -79,4 +80,23 @@ func GetUserById(user User) User {
 	}
 	return user
 
+}
+
+
+func ListUser(limit, page int)( (int, int))  {
+
+	fmt.Println(limit)
+	fmt.Println(page)
+	return limit, page
+	// orm := orm.NewOrm()
+	// // 获取表句柄
+	// qs := orm.QueryTable("user")
+	// //select * from student limit 5 ;
+	// n,err := qs.Limit(5) .All(&user)
+	// if err != nil {
+	// 	logs.Error(err)
+	// }
+	// logs.Error(n)
+	// return user
+	// return limit,page
 }

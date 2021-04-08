@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"beego-demo/models"
-
+	"fmt"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 )
@@ -13,10 +13,12 @@ type UserController struct {
 
 func (this *UserController) Post() {
 	userName := this.GetString("userName")
+	
 	user := models.User{UserName: userName}
-	logs.Info(user)
+	
+	fmt.Println(user)
 	userR := models.AddUser(user)
-	logs.Info(userR)
+	fmt.Println(userR)
 
 	// 返回json数据
 	this.Data["json"] = user
@@ -69,4 +71,21 @@ func (this *UserController) Get() {
 	// 返回json数据
 	this.Data["json"] = user
 	this.ServeJSON()
+}
+
+
+func (this *UserController)  ListUser()  {
+	// var limit string
+	// var page string
+	// limit = this.GetString("limit")
+	// page = this.GetString("page")
+	// fmt.Println(limit)
+	// fmt.Println(page)
+	a,b := models.ListUser(10, 1)
+	fmt.Println(a)
+	fmt.Println(b)
+	// 返回json数据
+	// this.Data["json"] = limit
+	// this.ServeJSON()
+
 }
