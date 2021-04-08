@@ -1,9 +1,10 @@
 package models
 
 import (
-	"github.com/astaxie/beego/logs"
-	"github.com/astaxie/beego/orm"
 	"fmt"
+
+	"github.com/beego/beego/v2/adapter/orm"
+	"github.com/beego/beego/v2/core/logs"
 )
 
 type User struct {
@@ -82,8 +83,7 @@ func GetUserById(user User) User {
 
 }
 
-
-func ListUser(limit, page int)( (int, int))  {
+func ListUser(limit, page int) (int, int) {
 
 	fmt.Println(limit)
 	fmt.Println(page)

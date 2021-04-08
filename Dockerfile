@@ -1,7 +1,7 @@
 FROM golang:1.9.1
 
 # Install beego and the bee dev tool*
-RUN go get github.com/astaxie/beego && go get github.com/beego/bee
+RUN go get github.com/beego/beego && go get github.com/beego/bee
 
 #指定好工作目录，后面就会以这个作为相对路径
 WORKDIR /home/app/
